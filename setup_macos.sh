@@ -74,22 +74,15 @@ echo ✅ Done
 echo Installing nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 echo ✅ Done
-# Install Fish Shell
-echo Installing Fish Shell
-brew install fish
-# https://fishshell.com/docs/current/faq.html#faq-default
-echo - Adding Fish to /etc/shells
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-echo - Changing default system shell to fish
-chsh -s /usr/local/bin/fish
+# Install ZSH
+echo Installing ZSH
+brew install zsh zsh-completions
+echo - Adding ZSH to /etc/shells
+echo /usr/local/bin/zsh | sudo tee -a /etc/shells
 echo ✅ Done
-# Install Oh My Fish plugin manager for Fish
-echo Installing Oh My Fish
-curl -L https://get.oh-my.fish | fish
-echo ✅ Done
-# Install NVM support in Fish
-echo Setting up NVM for Fish
-omf install nvm
+# Install Oh My Zsh and setting ZSH as default shell
+echo Installing Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo ✅ Done
 # Install KDIFF3
 echo Installing KDiff3
@@ -100,23 +93,10 @@ echo ✅ Done
 # Config Files
 #
 ###
-# Write Fish config file
-echo Writing Fish Shell config file
-echo $'status --is-interactive; and source (rbenv init -|psub)
-
-# Disable the "(venv)" that gets prepended to the prompt when activating a
-# Python virtual environment
-set -x VIRTUAL_ENV_DISABLE_PROMPT 1
-
-# Android SDK
-# set -x ANDROID_HOME "/Users/mmiller/android-sdk"
-
-# Command Aliases
-alias ping="ping -c 4"
-alias flushdns="sudo killall -HUP mDNSResponder"
-alias findtext="grep -rnw ./ -e"
-alias dc="docker-compose"
-' > ~/.config/fish/config.fish
+# Link dotfiles into place in ~
+echo Linking .zshrc into $HOME
+rm $HOME/.zshrc
+ln -sv "$(pwd)/.zshrc" ~
 echo ✅ Done
 # Write some downloads to ~/Desktop/Downloads.txt
 echo Writing a list of additional manual steps to ~/Desktop/NextSteps.txt
