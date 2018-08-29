@@ -22,3 +22,28 @@ For example, to move the **.profile** file into its rightful place in **~**, run
 ```sh
 $> ln -sv "$HOME/dotfiles/.profile" $HOME
 ```
+
+## Miscellaneous notes
+
+### Benchmarking ZSH/Bash/etc... startup times
+
+I was troubleshooting some slowness in ZSH startup when I came across this handy command:
+
+```sh
+$> for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done
+```
+
+This command will log the amount of time it takes to initialize the shell 10 times:
+
+```
+0.29 real         0.16 user         0.11 sys
+0.28 real         0.16 user         0.10 sys
+0.28 real         0.16 user         0.10 sys
+0.28 real         0.16 user         0.10 sys
+0.32 real         0.17 user         0.11 sys
+0.30 real         0.17 user         0.11 sys
+0.28 real         0.16 user         0.10 sys
+0.28 real         0.16 user         0.10 sys
+0.28 real         0.16 user         0.10 sys
+0.29 real         0.16 user         0.10 sys
+```
