@@ -42,10 +42,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Personal aliases
 # For a full list of active aliases, run `alias`.
-alias ping="ping -c 4"
-alias flushdns="sudo killall -HUP mDNSResponder"
-alias findtext="grep -rnw ./ -e"
-alias dc="docker-compose"
+source $HOME/dotfiles/aliases.sh
 
 # Loading nvm via "plugins" above incurs a massive ZSH startup cost. Enable manual init instead
 export NVM_DIR="$HOME/.nvm"
