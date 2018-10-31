@@ -47,3 +47,6 @@ source $HOME/dotfiles/aliases.sh
 # Loading nvm via "plugins" above incurs a massive ZSH startup cost. Enable manual init instead
 export NVM_DIR="$HOME/.nvm"
 alias loadnvm='[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"'
+
+# Enable Pipenv to use pyenv for Python version management
+export PYENV_ROOT="$HOME/.pyenv"
