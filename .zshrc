@@ -14,12 +14,13 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # powerlevel9k settings
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(nvm virtualenv rbenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(nvm virtualenv rbenv pyenv)
 # Change the foreground colors across all possible folder paths
 POWERLEVEL9K_DIR_HOME_FOREGROUND='015'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='015'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='015'
 POWERLEVEL9K_VIRTUALENV_BACKGROUND='076'
+POWERLEVEL9K_PYENV_BACKGROUND='015'
 # Truncate long paths like "/usr/share/plasma" to "/u/s/plasma"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=''
@@ -34,6 +35,7 @@ DEFAULT_USER="$(whoami)"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  pyenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -50,3 +52,5 @@ alias loadnvm='[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"'
 
 # Enable Pipenv to use pyenv for Python version management
 export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_SHIMS="$(pyenv root)/shims"
+export PATH="$PYENV_SHIMS:$PATH"
