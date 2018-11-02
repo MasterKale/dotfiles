@@ -176,7 +176,6 @@ Mac App Store:
 - Affinity Designer
 - GIF Brewery
 - Termius
-- Xcode
 
 Downloads:
 - Firefox: https://www.mozilla.org/en-US/firefox/new/
