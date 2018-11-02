@@ -161,7 +161,8 @@ echo $'Configuration:
   [ ] Set Download folder to display as "Folder"
   [ ] Set Download folder to view content as "Grid"
 [ ] Terminal (After installing shell themes)
-  [ ] Set Homebrew theme\'s font to "Roboto Mono Light for Powerline" (12pt)
+  [ ] Install a "Roboto Mono for Powerline" font (see Downloads list below)
+  [ ] Set Homebrew theme\'s font to the installed Powerline font (12pt)
   [ ] Check "Use bright colors for bold text"
 [ ] Keyboard (Preferences > Keyboard > Input Sources)
   [ ] Set up Japanese IME
@@ -179,7 +180,8 @@ Mac App Store:
 
 Downloads:
 - Firefox: https://www.mozilla.org/en-US/firefox/new/
-- Roboto Mono Light for Powerline font: https://github.com/powerline/fonts/tree/master/RobotoMono
+- Roboto Mono for Powerline font: https://github.com/powerline/fonts/tree/master/RobotoMono
+  - For non-4K screens, consider using Roboto Mono Light instead
 - VS Code: https://code.visualstudio.com/docs/\?dv=osx
   - Install Settings Sync to grab settings from your "cloudSettings" gist
 - iStat Menus: https://bjango.com/mac/istatmenus/
