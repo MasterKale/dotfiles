@@ -102,12 +102,12 @@ echo ✅ Done
 #
 ###
 
-echo Installing Python 3
-brew install python
+echo Installing Pipenv + pyenv
+brew install pipenv pyenv
 echo ✅ Done
 
-echo Installing rbenv + ruby-build
-brew install rbenv
+echo Unlinking Python3 to encourage pyenv use
+brew unlink python
 echo ✅ Done
 
 echo Installing nvm
