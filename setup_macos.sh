@@ -114,12 +114,20 @@ echo Installing nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 echo ✅ Done
 
+echo Installing Powerline Fonts
+brew tap homebrew/cask-fonts
+brew cask install font-roboto-mono-for-powerline
+echo ✅ Done
+
 echo Installing ZSH and adding it to /etc/shells
 brew install zsh zsh-completions
+# TODO: Figure out if we can eliminate the password prompt here
 echo /usr/local/bin/zsh | sudo tee -a /etc/shells
 echo ✅ Done
 
+# TODO: Figure out how to silently install Oh-My-ZSH
 echo Installing Oh My Zsh and setting ZSH as default shell
+# TODO: Figure out if we can eliminate the password prompt here when changing shells
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo ✅ Done
 
@@ -161,7 +169,6 @@ echo $'Configuration:
   [ ] Set Download folder to display as "Folder"
   [ ] Set Download folder to view content as "Grid"
 [ ] Terminal (After installing shell themes)
-  [ ] Install a "Roboto Mono for Powerline" font (see Downloads list below)
   [ ] Set Homebrew theme\'s font to the installed Powerline font (12pt)
   [ ] Check "Use bright colors for bold text"
 [ ] Keyboard (Preferences > Keyboard > Input Sources)
@@ -179,8 +186,6 @@ Mac App Store:
 
 Downloads:
 - Firefox: https://www.mozilla.org/en-US/firefox/new/
-- Roboto Mono for Powerline font: https://github.com/powerline/fonts/tree/master/RobotoMono
-  - For non-4K screens, consider using Roboto Mono Light instead
 - VS Code: https://code.visualstudio.com/docs/\?dv=osx
   - Install Settings Sync to grab settings from your "cloudSettings" gist
 - iStat Menus: https://bjango.com/mac/istatmenus/
