@@ -113,7 +113,7 @@ brew install pipenv pyenv
 echo ✅ Done
 
 echo Unlinking Python3 to encourage pyenv use
-brew unlink python
+brew unlink python3
 echo ✅ Done
 
 echo Installing nvm
