@@ -9,6 +9,12 @@ echo Closing any system preferences to prevent issues with automated changes
 osascript -e 'tell application "System Preferences" to quit'
 echo ✅ Done
 
+echo Requesting sudo elevation before proceeding
+sudo -v
+# Keep-alive: update existing sudo time stamp until the script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+echo ✅ Done
+
 echo Installing Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo ✅ Done
