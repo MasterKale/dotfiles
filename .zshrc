@@ -46,11 +46,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 source $HOME/dotfiles/aliases.sh
 
-# Loading nvm via "plugins" above incurs a massive ZSH startup cost. Enable manual init instead
-export NVM_DIR="$HOME/.nvm"
-alias loadnvm='[[ -f "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"'
-
 # Enable Pipenv to use pyenv for Python version management
 export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_SHIMS="$(pyenv root)/shims"
 export PATH="$PYENV_SHIMS:$PATH"
+
+export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
