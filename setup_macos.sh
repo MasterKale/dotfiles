@@ -116,8 +116,8 @@ echo Unlinking Python3 to encourage pyenv use
 brew unlink python3
 echo ✅ Done
 
-echo Installing n (Node version management)
-curl -L https://git.io/n-install | N_PREFIX=~/.n bash -s -- -y
+echo Installing nvm (Node version management)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 echo ✅ Done
 
 echo Installing Powerline Fonts
