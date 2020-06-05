@@ -46,11 +46,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 source $HOME/dotfiles/aliases.sh
 
-# Enable Pipenv to use pyenv for Python version management
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_SHIMS="$(pyenv root)/shims"
-export PATH="$PYENV_SHIMS:$PATH"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
