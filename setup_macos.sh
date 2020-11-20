@@ -68,7 +68,7 @@ killall Finder
 echo ✅ Done
 
 echo Adding additional filetype support to Finder\'s preview
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package qlvideo
+brew cask install quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
 echo ✅Done
 
 echo Setting up top-left hot corner to activate Mission Control
