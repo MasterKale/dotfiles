@@ -29,6 +29,12 @@ POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
 # Disable the username prompt on the left side of the theme unless logged into a remote host
 DEFAULT_USER="$(whoami)"
 
+# NVM (Node Version Manager - https://github.com/nvm-sh/nvm)
+export NVM_DIR="$HOME/.nvm"
+# zsh-nvm (https://github.com/lukechilds/zsh-nvm)
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -36,6 +42,7 @@ DEFAULT_USER="$(whoami)"
 plugins=(
   git
   pyenv
+  zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -45,11 +52,6 @@ source $ZSH/oh-my-zsh.sh
 # Personal aliases
 # For a full list of active aliases, run `alias`.
 source $HOME/dotfiles/aliases.sh
-
-# NVM (Node Version Manager - https://github.com/nvm-sh/nvm)
-export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # DVM (Deno Version Manager - https://github.com/imbsky/dvm)
 export PATH="$PATH:$HOME/.dvm"
