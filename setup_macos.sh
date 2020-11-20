@@ -122,7 +122,7 @@ echo ✅ Done
 
 echo Installing Powerline Fonts
 brew tap homebrew/cask-fonts
-brew cask install font-roboto-mono-for-powerline
+brew cask install font-cascadia-code-pl
 echo ✅ Done
 
 echo Installing ZSH and adding it to /etc/shells
