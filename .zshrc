@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
@@ -7,24 +14,8 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# powerlevel9k settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(nvm virtualenv rbenv pyenv)
-# Change the foreground colors across all possible folder paths
-POWERLEVEL9K_DIR_HOME_FOREGROUND='015'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='015'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='015'
-POWERLEVEL9K_VIRTUALENV_BACKGROUND='076'
-POWERLEVEL9K_PYENV_BACKGROUND='015'
-# Truncate long paths like "/usr/share/plasma" to "/u/s/plasma"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=''
-POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Disable the username prompt on the left side of the theme unless logged into a remote host
 DEFAULT_USER="$(whoami)"
@@ -57,3 +48,5 @@ source $HOME/dotfiles/aliases.sh
 export PATH="$PATH:$HOME/.dvm"
 export PATH="$PATH:$HOME/.deno/bin"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f $HOME/dotfiles/.p10k.zsh ]] || source $HOME/dotfiles/.p10k.zsh
