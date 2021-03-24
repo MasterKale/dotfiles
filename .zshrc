@@ -33,7 +33,7 @@ export NVM_COMPLETION=true
 plugins=(
   git
   pyenv
-  zsh-nvm
+  nvm
 )
 
 source $ZSH/oh-my-zsh.sh
