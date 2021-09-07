@@ -26,6 +26,11 @@ export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 
+# Enable Pipenv to use pyenv for Python version management
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
