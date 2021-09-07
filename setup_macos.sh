@@ -145,6 +145,10 @@ echo Installing KDiff3
 brew cask install kdiff3
 echo ✅ Done
 
+echo Installing fzf
+brew install fzf
+echo ✅ Done
+
 ###
 #
 # Config Files

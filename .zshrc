@@ -34,6 +34,7 @@ plugins=(
   git
   pyenv
   nvm
+  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
