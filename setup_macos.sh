@@ -189,11 +189,13 @@ echo $'Configuration:
   [ ] Activate "Contacts" and "Calendars" for any inactive Google accounts"
 
 Mac App Store:
-- Airmail
-- Pixelmator Pro
 - Affinity Designer
+- Affinity Photo
 - GIF Brewery
 - Termius
+- Magnet
+- Soulver 3
+- Broadcasts
 
 Downloads:
 - Firefox: https://www.mozilla.org/en-US/firefox/new/
@@ -205,18 +207,9 @@ Downloads:
   - Basic Settings
     - Check "Launch BetterTouchTool on startup"
     - Check "Enable window snapping"
-- Rambox: http://rambox.pro/\#download
-- Clementine: https://www.clementine-player.org/downloads
-  - Preferences > User interface > Configure Shortcuts
-    - Set Next Track to Ctrl+Alt+X
-    - Set Play to Ctrl+Alt+A
-    - Set Play/Pause to Ctrl+Alt+S
-    - Set Previous Track to Ctrl+Alt+Z
-    - Set Stop to Ctrl+Alt+D
 - Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 - Tower: https://www.git-tower.com/mac
-- Contexts: https://contexts.co
-- Sound Control: https://staticz.com/soundcontrol/
+- SoundSource: https://rogueamoeba.com/soundsource/
 
 Arrangement:
 
