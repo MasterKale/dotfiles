@@ -56,6 +56,7 @@ export PATH="$PATH:$HOME/.deno/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/dotfiles/.p10k.zsh ]] || source $HOME/dotfiles/.p10k.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Set up Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
