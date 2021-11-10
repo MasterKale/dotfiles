@@ -210,6 +210,8 @@ Downloads:
 - Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 - Tower: https://www.git-tower.com/mac
 - SoundSource: https://rogueamoeba.com/soundsource/
+- iTerm: https://iterm2.com/downloads.html
+  - Run `p10k configure` and install "Meslo nerd font" when prompted for PL icons and ligatures
 
 Arrangement:
 
