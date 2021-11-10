@@ -75,7 +75,7 @@ killall Finder
 echo ✅ Done
 
 echo Adding additional filetype support to Finder\'s preview
-brew cask install quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
+brew install --cask quicklook-json quicklook-csv qlimagesize webpquicklook qlvideo
 echo ✅Done
 
 echo Setting up top-left hot corner to activate Mission Control
@@ -129,7 +129,7 @@ echo ✅ Done
 
 echo Installing Powerline Fonts
 brew tap homebrew/cask-fonts
-brew cask install font-cascadia-code-pl
+brew install --cask font-cascadia-code-pl
 echo ✅ Done
 
 # TODO: Figure out how to silently install Oh-My-ZSH
@@ -143,7 +143,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zs
 echo ✅ Done
 
 echo Installing KDiff3
-brew cask install kdiff3
+brew install --cask kdiff3
 echo ✅ Done
 
 echo Installing fzf
