@@ -132,12 +132,6 @@ brew tap homebrew/cask-fonts
 brew cask install font-cascadia-code-pl
 echo ✅ Done
 
-echo Installing ZSH and adding it to /etc/shells
-brew install zsh zsh-completions
-# TODO: Figure out if we can eliminate the password prompt here
-echo /usr/local/bin/zsh | sudo tee -a /etc/shells
-echo ✅ Done
-
 # TODO: Figure out how to silently install Oh-My-ZSH
 echo Installing Oh My Zsh and setting ZSH as default shell
 # TODO: Figure out if we can eliminate the password prompt here when changing shells
