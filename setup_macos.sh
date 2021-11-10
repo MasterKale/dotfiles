@@ -138,7 +138,7 @@ echo Installing Oh My Zsh and setting ZSH as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo ✅ Done
 
-echo Installing powerlevel9k ZSH theme
+echo Installing powerlevel10k ZSH theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 echo ✅ Done
 
