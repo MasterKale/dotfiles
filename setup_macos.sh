@@ -124,7 +124,7 @@ brew unlink python3
 echo ✅ Done
 
 echo "Installing nvm (Node version management)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 echo ✅ Done
 
 echo Installing Powerline Fonts
