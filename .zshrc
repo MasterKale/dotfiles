@@ -50,6 +50,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 source $HOME/dotfiles/aliases.sh
 
+# Pipenv
+export PATH="$PATH:$HOME/.local/bin"
+
 # DVM (Deno Version Manager - https://github.com/imbsky/dvm)
 export PATH="$PATH:$HOME/.dvm"
 export PATH="$PATH:$HOME/.deno/bin"
