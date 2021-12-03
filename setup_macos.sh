@@ -15,8 +15,15 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo ✅ Done
 
+# Add symbolic links to the dotfiles in this directory
+echo Installing Rosetta 2
+source $(pwd)/macos/install_rosetta.sh
+echo ✅ Done
+
 echo Installing Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 echo ✅ Done
 
 ###
@@ -68,7 +75,7 @@ killall Finder
 echo ✅ Done
 
 echo Adding additional filetype support to Finder\'s preview
-brew cask install quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
+brew install --cask quicklook-json quicklook-csv qlimagesize webpquicklook qlvideo
 echo ✅Done
 
 echo Setting up top-left hot corner to activate Mission Control
@@ -117,18 +124,12 @@ brew unlink python3
 echo ✅ Done
 
 echo "Installing nvm (Node version management)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 echo ✅ Done
 
 echo Installing Powerline Fonts
 brew tap homebrew/cask-fonts
-brew cask install font-cascadia-code-pl
-echo ✅ Done
-
-echo Installing ZSH and adding it to /etc/shells
-brew install zsh zsh-completions
-# TODO: Figure out if we can eliminate the password prompt here
-echo /usr/local/bin/zsh | sudo tee -a /etc/shells
+brew install --cask font-cascadia-code-pl
 echo ✅ Done
 
 # TODO: Figure out how to silently install Oh-My-ZSH
@@ -137,12 +138,12 @@ echo Installing Oh My Zsh and setting ZSH as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo ✅ Done
 
-echo Installing powerlevel9k ZSH theme
+echo Installing powerlevel10k ZSH theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 echo ✅ Done
 
 echo Installing KDiff3
-brew cask install kdiff3
+brew install --cask kdiff3
 echo ✅ Done
 
 echo Installing fzf
@@ -188,11 +189,13 @@ echo $'Configuration:
   [ ] Activate "Contacts" and "Calendars" for any inactive Google accounts"
 
 Mac App Store:
-- Airmail
-- Pixelmator Pro
 - Affinity Designer
+- Affinity Photo
 - GIF Brewery
 - Termius
+- Magnet
+- Soulver 3
+- Broadcasts
 
 Downloads:
 - Firefox: https://www.mozilla.org/en-US/firefox/new/
@@ -204,18 +207,11 @@ Downloads:
   - Basic Settings
     - Check "Launch BetterTouchTool on startup"
     - Check "Enable window snapping"
-- Rambox: http://rambox.pro/\#download
-- Clementine: https://www.clementine-player.org/downloads
-  - Preferences > User interface > Configure Shortcuts
-    - Set Next Track to Ctrl+Alt+X
-    - Set Play to Ctrl+Alt+A
-    - Set Play/Pause to Ctrl+Alt+S
-    - Set Previous Track to Ctrl+Alt+Z
-    - Set Stop to Ctrl+Alt+D
 - Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 - Tower: https://www.git-tower.com/mac
-- Contexts: https://contexts.co
-- Sound Control: https://staticz.com/soundcontrol/
+- SoundSource: https://rogueamoeba.com/soundsource/
+- iTerm: https://iterm2.com/downloads.html
+  - Run `p10k configure` and install "Meslo nerd font" when prompted for PL icons and ligatures
 
 Arrangement:
 
