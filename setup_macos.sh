@@ -150,6 +150,10 @@ echo Installing fzf
 brew install fzf
 echo ✅ Done
 
+echo "Setting default branch name to 'main'"
+git config --global init.defaultBranch main
+echo ✅ Done
+
 ###
 #
 # Config Files
