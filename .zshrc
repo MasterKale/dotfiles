@@ -60,5 +60,4 @@ export PATH="$PATH:$HOME/.deno/bin"
 
 # Set up Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export HOMEBREW_NO_GOOGLE_ANALYTICS=1
 
