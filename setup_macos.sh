@@ -97,6 +97,10 @@ echo Enabling indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 echo ✅ Done
 
+echo Setting Dock icon size
+defaults write com.apple.dock tilesize -int 70
+echo ✅ Done
+
 echo Disabling resizing the Dock via the divider
 defaults write com.apple.dock size-immutable -bool true
 echo ✅ Done
