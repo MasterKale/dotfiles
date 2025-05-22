@@ -97,6 +97,10 @@ echo Enabling indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 echo ✅ Done
 
+echo Disabling resizing the Dock via the divider
+defaults write com.apple.dock size-immutable -bool true
+echo ✅ Done
+
 echo Grouping windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool true
 echo ✅ Done
