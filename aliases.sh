@@ -4,7 +4,7 @@ alias findtext="grep -rnw ./ -e"
 alias dc="docker compose"
 alias pva="source venv/bin/activate"
 alias tower="gittower ."
-alias pyserv="python3 -m http.server -b localhost"
+alias httpserver="python3 -m http.server -b 127.0.0.1"
 
 makerandpass() {
   # A simple command to generate a simple, random password. Think "Webex video link password"
