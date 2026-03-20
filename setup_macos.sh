@@ -3,10 +3,10 @@
 # Thanks to https://github.com/atomantic/dotfiles for revealing some key macOS settings
 # commands!
 
-echo [Setting up OSX]
+echo [Setting up macOS]
 
 echo Closing any system preferences to prevent issues with automated changes
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 echo ✅ Done
 
 echo Requesting sudo elevation before proceeding
@@ -74,16 +74,6 @@ echo Restarting Finder
 killall Finder
 echo ✅ Done
 
-echo Adding additional filetype support to Finder\'s preview
-brew install --cask quicklook-json quicklook-csv qlimagesize webpquicklook qlvideo
-echo ✅Done
-
-echo Setting up top-left hot corner to activate Mission Control
-defaults write com.apple.dock wvous-tl-corner -int 2
-defaults write com.apple.dock wvous-tl-modifier -int 0
-killall Dock
-echo ✅ Done
-
 echo Setting Terminal to default to Homebrew
 defaults write com.apple.Terminal "Default Window Settings" -string Homebrew
 defaults write com.apple.Terminal "Startup Window Settings" -string Homebrew
@@ -109,10 +99,6 @@ echo Grouping windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool true
 echo ✅ Done
 
-echo Disabling the Mission Control Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-echo ✅ Done
-
 echo Disabling rearranging Mission Control Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 echo ✅ Done
@@ -132,26 +118,24 @@ brew unlink python3
 echo ✅ Done
 
 echo "Installing nvm (Node version management)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 echo ✅ Done
 
-echo Installing Powerline Fonts
-brew tap homebrew/cask-fonts
-brew install --cask font-cascadia-code-pl
+echo Installing Fonts
+brew install --cask font-cascadia-code font-meslo-lg-nerd-font
 echo ✅ Done
 
-# TODO: Figure out how to silently install Oh-My-ZSH
 echo Installing Oh My Zsh and setting ZSH as default shell
-# TODO: Figure out if we can eliminate the password prompt here when changing shells
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sudo chsh -s $(which zsh) "$USER"
 echo ✅ Done
 
 echo Installing powerlevel10k ZSH theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 echo ✅ Done
 
-echo Installing KDiff3
-brew install --cask kdiff3
+echo Installing Beyond Compare
+brew install --cask beyond-compare
 echo ✅ Done
 
 echo Installing fzf
@@ -191,39 +175,45 @@ echo $'Configuration:
   [ ] Set Download folder to sort by "Date Added"
   [ ] Set Download folder to display as "Folder"
   [ ] Set Download folder to view content as "Grid"
+[ ] Hot Corners (System Settings > Desktop & Dock > Hot Corners...)
+  [ ] Top Left: Mission Control
+  [ ] Top Right: Mission Control
+  [ ] Bottom Left: Quick Note?
+  [ ] Bottom Right: Notification Center
+[ ] 1Password
+  [ ] Set up SSH agent to sign commits
 [ ] Terminal (After installing shell themes)
-  [ ] Set Homebrew theme\'s font to the installed Powerline font (12pt)
-  [ ] Check "Use bright colors for bold text"
-[ ] Keyboard (Preferences > Keyboard > Input Sources)
+  [ ] Set Homebrew theme\'s font to the installed Powerline font (14pt)
+[ ] Keyboard (System Settings > Keyboard > Input Sources)
   [ ] Set up Japanese IME
     [ ] Uncheck all Input Modes except for default Hiragana
-[ ] Internet Accounts (Preferences > Internet Accounts)
+[ ] Internet Accounts (System Settings > Internet Accounts)
   [ ] Activate "Contacts" and "Calendars" for any inactive Google accounts"
 
 Mac App Store:
-- Affinity Designer
-- Affinity Photo
+- Pixelmator Pro
 - GIF Brewery
 - Termius
 - Magnet
 - Soulver 3
 - Broadcasts
+- Color Picker
 
 Downloads:
-- Firefox: https://www.mozilla.org/en-US/firefox/new/
 - VS Code: https://code.visualstudio.com/docs/\?dv=osx
   - Install Settings Sync to grab settings from your "cloudSettings" gist
 - iStat Menus: https://bjango.com/mac/istatmenus/
-  - Preferences > Date & Time > Clock > Uncheck "Show date and time in menu bar"
+  - System Settings > Date & Time > Clock > Uncheck "Show date and time in menu bar"
 - BetterTouchTool: https://folivora.ai/downloads
   - Basic Settings
     - Check "Launch BetterTouchTool on startup"
     - Check "Enable window snapping"
 - Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 - Tower: https://www.git-tower.com/mac
-- SoundSource: https://rogueamoeba.com/soundsource/
-- iTerm: https://iterm2.com/downloads.html
-  - Run `p10k configure` and install "Meslo nerd font" when prompted for PL icons and ligatures
+- SoundSource: https://rogueamoeba.com/soundsource
+- Thaw: https://github.com/stonerl/Thaw
+- Pastebot: https://tapbots.com/pastebot
+- Tailscale: https://tailscale.com
 
 Arrangement:
 
