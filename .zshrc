@@ -50,9 +50,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 source $HOME/dotfiles/aliases.sh
 
-# DVM (Deno Version Manager - https://github.com/imbsky/dvm)
-export PATH="$PATH:$HOME/.dvm"
-export PATH="$PATH:$HOME/.deno/bin"
+# DVM (Deno Version Manager - https://github.com/justjavac/dvm)
+export DVM_DIR="$HOME/.dvm"
+export PATH="$DVM_DIR/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/dotfiles/.p10k.zsh ]] || source $HOME/dotfiles/.p10k.zsh
