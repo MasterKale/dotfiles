@@ -15,9 +15,10 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo ✅ Done
 
-echo Installing Rosetta 2
-source $(pwd)/macos/install_rosetta.sh
-echo ✅ Done
+# (Mar 2026) Seeing how far I can get without installing Rosetta...
+# echo Installing Rosetta 2
+# source $(pwd)/macos/install_rosetta.sh
+# echo ✅ Done
 
 echo Installing Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
