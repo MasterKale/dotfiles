@@ -49,6 +49,10 @@ echo Showing status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 echo ✅ Done
 
+echo Showing path in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+echo ✅ Done
+
 echo Setting hidden files to always appear in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true
 echo ✅ Done
