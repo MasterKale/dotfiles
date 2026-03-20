@@ -103,6 +103,22 @@ echo Disabling rearranging Mission Control Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 echo ✅ Done
 
+echo Enabling tabbing through dialogs
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+echo ✅ Done
+
+echo Disabling smart quote substitutions
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+echo ✅ Done
+
+echo Disabling smart dash substitutions
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+echo ✅ Done
+
+echo Disabling auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+echo ✅ Done
+
 ###
 #
 # Applications
