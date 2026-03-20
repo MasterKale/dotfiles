@@ -74,3 +74,6 @@ export PATH="$HOME/.deno/bin:$PATH"
 # macOS ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.cache/lm-studio/bin"
+# End of LM Studio CLI section
