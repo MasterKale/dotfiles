@@ -137,6 +137,10 @@ echo "Installing nvm (Node version management)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 echo ✅ Done
 
+echo Installing Deno Version Manager
+curl -fsSL https://dvm.deno.dev | sh
+echo ✅ Done
+
 echo Installing Fonts
 brew install --cask font-cascadia-code font-meslo-lg-nerd-font
 echo ✅ Done
