@@ -70,3 +70,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Deno
 export PATH="$HOME/.deno/bin:$PATH"
+
+# macOS ~/.local/bin
+export PATH="$HOME/.local/bin:$PATH"
+
