@@ -211,17 +211,18 @@ echo $'Configuration:
 [ ] Keyboard (System Settings > Keyboard > Input Sources)
   [ ] Set up Japanese IME
     [ ] Uncheck all Input Modes except for default Hiragana
+    [ ] Go into Keyboard > TODO and change Opt + Space to toggle languages
 [ ] Internet Accounts (System Settings > Internet Accounts)
   [ ] Activate "Contacts" and "Calendars" for any inactive Google accounts"
 
 Mac App Store:
-- Pixelmator Pro
-- GIF Brewery
-- Termius
-- Magnet
-- Soulver 3
-- Broadcasts
-- Color Picker
+- [ ] Pixelmator Pro
+- [ ] GIF Brewery
+- [ ] Termius
+- [ ] Magnet
+- [ ] Soulver 3
+- [ ] Broadcasts
+- [ ] Color Picker
 
 Downloads:
 - VS Code: https://code.visualstudio.com/docs/\?dv=osx
