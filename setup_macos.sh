@@ -131,6 +131,10 @@ echo Disabling auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 echo ✅ Done
 
+echo Creating Open in VS Code quick action in Finder
+cp -r $(pwd)/macos/"Open in VS Code.workflow" $HOME/Library/Services
+echo ✅ Done
+
 ###
 #
 # Applications
