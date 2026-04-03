@@ -74,6 +74,14 @@ echo Show full path in Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 echo ✅ Done
 
+echo Change Finder search to default to searching current folder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+echo ✅ Done
+
+echo Disable Finder warning when changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+echo ✅ Done
+
 echo Restarting Finder
 killall Finder
 echo ✅ Done
