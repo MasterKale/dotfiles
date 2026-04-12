@@ -22,6 +22,7 @@ DEFAULT_USER="$(whoami)"
 
 # NVM (Node Version Manager - https://github.com/nvm-sh/nvm)
 export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # zsh-nvm (https://github.com/lukechilds/zsh-nvm)
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
