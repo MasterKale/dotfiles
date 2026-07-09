@@ -45,9 +45,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 
-# Deno
-export PATH="$HOME/.deno/bin:$PATH"
-
 # macOS ~/.local/bin
 export PATH="$PATH:$HOME/.local/bin"
 
