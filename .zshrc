@@ -48,6 +48,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # macOS ~/.local/bin
 export PATH="$PATH:$HOME/.local/bin"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:$HOME/.cache/lm-studio/bin"
-# End of LM Studio CLI section
