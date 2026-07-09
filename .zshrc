@@ -48,3 +48,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # macOS ~/.local/bin
 export PATH="$PATH:$HOME/.local/bin"
 
+# mise is life (use it to manage python, uv, deno, node, etc... per-project)
+eval "$(mise activate zsh)"
