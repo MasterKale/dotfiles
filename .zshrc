@@ -49,7 +49,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.deno/bin:$PATH"
 
 # macOS ~/.local/bin
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.cache/lm-studio/bin"
