@@ -20,26 +20,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Disable the username prompt on the left side of the theme unless logged into a remote host
 DEFAULT_USER="$(whoami)"
 
-# NVM (Node Version Manager - https://github.com/nvm-sh/nvm)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-# zsh-nvm (https://github.com/lukechilds/zsh-nvm)
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-
-# Enable pyenv to use it for Python version management
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  pyenv
-  nvm
   fzf
 )
 
@@ -57,7 +43,6 @@ export PATH="$DVM_DIR/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/dotfiles/.p10k.zsh ]] || source $HOME/dotfiles/.p10k.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Set up Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
