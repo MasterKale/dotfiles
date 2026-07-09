@@ -43,12 +43,7 @@ source $HOME/dotfiles/aliases.sh
 # Set up Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# bun completions
-# [ -s "/Users/matt/.bun/_bun" ] && source "/Users/matt/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Deno
 export PATH="$HOME/.deno/bin:$PATH"
