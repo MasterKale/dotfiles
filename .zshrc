@@ -33,20 +33,20 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Personal aliases
-# For a full list of active aliases, run `alias`.
-source $HOME/dotfiles/aliases.sh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/dotfiles/.p10k.zsh ]] || source $HOME/dotfiles/.p10k.zsh
-
-# Set up Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 
 # macOS ~/.local/bin
 export PATH="$PATH:$HOME/.local/bin"
+
+# Personal aliases
+# For a full list of active aliases, run `alias`.
+source $HOME/dotfiles/aliases.sh
+
+# Set up Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # mise is life (use it to manage python, uv, deno, node, etc... per-project)
 eval "$(mise activate zsh)"
