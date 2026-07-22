@@ -135,26 +135,26 @@ echo Creating Open in VS Code quick action in Finder
 cp -r $(pwd)/macos/"Open in VS Code.workflow" $HOME/Library/Services
 echo ✅ Done
 
+echo Expand Save As dialog to full size by default
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+echo ✅ Done
+
 ###
 #
 # Applications
 #
 ###
 
-echo Installing Pipenv + pyenv
-brew install pipenv pyenv
+echo Installing pyenv
+brew install pyenv
 echo ✅ Done
 
 echo Unlinking Python3 to encourage pyenv use
 brew unlink python3
 echo ✅ Done
 
-echo "Installing nvm (Node version management)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-echo ✅ Done
-
-echo Installing Deno Version Manager
-curl -fsSL https://dvm.deno.dev | sh
+echo Installing mise
+brew install mise
 echo ✅ Done
 
 echo Installing Fonts
@@ -219,7 +219,7 @@ echo $'Configuration:
 [ ] 1Password
   [ ] Set up SSH agent to sign commits
 [ ] Terminal (After installing shell themes)
-  [ ] Set Homebrew theme\'s font to the installed Powerline font (14pt)
+  [ ] Set Homebrew theme\'s font to MesloLGS Nerd Font (14pt)
 [ ] Keyboard (System Settings > Keyboard > Input Sources)
   [ ] Set up Japanese IME
     [ ] Uncheck all Input Modes except for default Hiragana
